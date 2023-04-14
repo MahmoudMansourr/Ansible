@@ -1,0 +1,11 @@
+- name: My_handler_1
+  ansible.builtin.copy:
+    src: "{{ item  }}"
+    dest: /var/www/html
+  loop: "{{ files_list  }}"
+  notify: my_handler_2 
+
+- name: my_handler_2
+  service:
+    name: "{{ package_name  }}"
+    state: started

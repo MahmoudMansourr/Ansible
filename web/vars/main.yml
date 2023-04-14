@@ -1,0 +1,7 @@
+package_name: nginx
+files_list: 
+  - main.css
+  - main.js  
+
+name: person
+quotes: a normal quote
